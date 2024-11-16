@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [errorMsg, setErrorMsg] = useState('');
@@ -18,6 +18,8 @@ export default function Home() {
     if(e.target.files[0].type!=='image/jpeg' &&
       e.target.files[0].type!=='image/jpg' && e.target.files[0].type!=='image/png'){
       setErrorMsg("Error: choose jpg/png/jpeg files for image")
+    }else{
+      setErrorMsg('')
     }
     if(e.target.files[0].size>1000000){
       setErrorMsg("Error: size of image exceeds")
@@ -27,6 +29,7 @@ export default function Home() {
   const handleSubmit = (e)=>{
     if(errorMsg){
       e.preventDefault();
+      
     }else{
       setErrorMsg('')
     }
