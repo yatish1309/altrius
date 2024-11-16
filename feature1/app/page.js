@@ -4,6 +4,8 @@ import { useState } from "react";
 
 //Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character
 const regexForPass = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
+
+// This function for user Registration I only validated password here due to time constraint using above regex code. Could also add validation for Email like .com, for username to have letters and numbers only.
 export default function Home() {
   const [email,setEmail] = useState('');
   const [pass,setPass] = useState('');

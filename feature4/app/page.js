@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+//This component for todo tasks, I added feature to add, update, delete.
 export default function Home() {
   const [tasks, setTasks] = useState([]);
   const [setlectedTask,setSelectedTask]= useState(0);

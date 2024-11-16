@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+// This is the component for image upload only checked type of the image in line 10 and validated it due to time constraint
 export default function Home() {
   const [errorMsg, setErrorMsg] = useState('');
   const handleChange = (e)=>{

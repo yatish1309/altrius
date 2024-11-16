@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+//This is the component for profile similarly only validated type of the profile.
 export default function Home() {
   const [errorMsg, setErrorMsg] = useState('');
   const [name, setName] = useState('');
